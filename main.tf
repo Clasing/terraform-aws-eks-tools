@@ -47,7 +47,7 @@ module "external_dns" {
 
 module "container-insights" {
   source  = "Young-ook/eks/aws//modules/container-insights"
-  version = "1.7.10"
+  version = "1.6.0"
 
   cluster_name = data.aws_eks_cluster.eks-cluster.name
   oidc         = local.oidc
