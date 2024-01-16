@@ -62,8 +62,9 @@ module "container-insights" {
 
 module "metrics-server" {
   source  = "Young-ook/eks/aws//modules/metrics-server"
-  version = "1.7.10"
+  version = "1.6.0"
 
+  cluster_name = data.aws_eks_cluster.eks-cluster.name
   oidc = local.oidc
   helm = {
     repository = "https://kubernetes-sigs.github.io/metrics-server/"
