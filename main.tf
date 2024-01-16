@@ -18,7 +18,7 @@ locals {
 module "alb_controller" {
   source  = "Young-ook/eks/aws//modules/lb-controller"
   version = "1.7.2"
-
+  cluster_name = var.eks_cluster_name
   oidc = local.oidc
   helm = {
     vars = {
