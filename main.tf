@@ -17,7 +17,7 @@ locals {
 
 module "alb_controller" {
   source  = "Young-ook/eks/aws//modules/lb-controller"
-  version = "1.7.10"
+  version = "1.7.2"
 
   oidc = local.oidc
   helm = {
